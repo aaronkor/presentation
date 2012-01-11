@@ -1,5 +1,5 @@
 !!! 5
-html(lang="en")  
+html(lang="en")
   head
     title Node.JS Presentation | Slides
     link(rel='stylesheet', type='text/css', href='media/css/prettify.css')
@@ -9,16 +9,18 @@ html(lang="en")
     script(type='text/javascript', src='media/js/prettify.js')
     script
       $(document).ready(function() {
-        $('#presentation').fathom();
+        var fathom = new Fathom('#presentation');
       });
   body
-    h1 Node.JS Presentation
     div(id="presentation")
+
       div(class="slide")
-        h2 Welcome
-        ul
-          li First point
-          li Second point
+        h1 Introduction to 
+        img(src="media/img/Nodejs_logo_light.png", alt="Node.JS")
+      
       div(class="slide")
         h2 Bye...
         p bye bye
+      
+      div(class="slide")
+        

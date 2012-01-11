@@ -10,7 +10,7 @@ app.use('/media', express.static(__dirname + '/media'));
 //app.use('/media/js', express.static(__dirname + 'media/js/'));
 
 app.get('/', function(req, res){
-  res.send('hello world\n' + __dirname + 'media/js/');
+  res.send('hello world\n' + __dirname + '/media/img/nodejs-light.eps\n');
 });
 
 app.get('/slides', function(req, res){
