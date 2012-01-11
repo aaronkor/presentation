@@ -9,15 +9,7 @@ html(lang="en")
     script(type='text/javascript', src='media/js/prettify.js')
     script
       $(document).ready(function() {
-        $('pre').addClass('prettyprint').attr('tabIndex', 0);
-        prettyPrint();
-
-        var fathom = $('#presentation').Fathom( {
-          onActivateSlide: function() {
-            var $slide = $(this);
-            $slide.find('pre:first').focus();
-          }
-        });
+        $('#presentation').fathom();
       });
   body
     h1 Node.JS Presentation
