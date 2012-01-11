@@ -128,10 +128,10 @@ iframe {
 strong {
 	text-shadow: 1px 0 0 #606060;
 }
-h1 {
+h1, q {
 	color: #121B28;
 	font-family: 'Ubuntu', helvetica, trebuchet ms, serif;
-	font-size: 34pt;
+	font-size: 40pt;
 	margin-bottom: 14px;
 	margin-top: 10px;
 	text-align: center;
@@ -141,20 +141,48 @@ h1#prelogo {
 	margin-left: -368px;
 	overflow: hidden;
 	position: absolute;
-	top: 150px;
+	top: 130px;
 	width: 735px;
 }
 h1#logo {
-	background-image: url(../images/jquery-mobile-logo.png);
-	height: 202px;
+	background-image: url(/media/img/Nodejs_logo_light.png);
+	height: 178px;
 	line-height: 1000px;
 	left: 50%;
-	margin-left: -368px;
+	margin-left: -260px;
 	overflow: hidden;
 	position: absolute;
-	top: 220px;
-	width: 735px;
+	top: 228px;
+	width: 520px;
 }
+h2 {
+  color: #121B28;
+  font-family: 'Ubuntu', helvetica, trebuchet ms, serif;
+	font-size: 24pt;
+	margin-bottom: 14px;
+	margin-top: 10px;
+	text-align: center;
+}
+h2#author, h2#thanks {
+  left: 50%;
+  margin-left: -368px;
+  overflow: hidden;
+  position: absolute;
+  top: 550px;
+  width: 735px;
+}
+
+q {
+  color: #808080;
+  font-size: 100pt;
+  top: 250px;
+  left: 50%;
+  margin-left: -20px;
+  overflow: hidden;
+  position: absolute;
+}
+
+
 ul {
 	padding: 60px;
 }

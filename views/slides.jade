@@ -9,18 +9,33 @@ html(lang="en")
     script(type='text/javascript', src='media/js/prettify.js')
     script
       $(document).ready(function() {
+        
+        $('pre').addClass('prettyprint').attr('tabIndex', 0);
+        prettyPrint();
+
         var fathom = new Fathom('#presentation');
       });
   body
     div(id="presentation")
 
       div(class="slide")
-        h1 Introduction to 
-        img(src="media/img/Nodejs_logo_light.png", alt="Node.JS")
+        // Start
+        h1(id="prelogo")
+          | Introduction to
+        h1(id="logo")
+          | Node.JS
+        br
+        h2(id="author")
+          | by Aaron Kor
       
       div(class="slide")
-        h2 Bye...
-        p bye bye
-      
+        //Page 1 - Intro
+        h1 Intro...
+        pre &lt;a&gt;hi&lt;/a&gt;
+
       div(class="slide")
+        q ?
+        h2(id="thanks")
+          | Thanks, <br/> Aaron
+
         
