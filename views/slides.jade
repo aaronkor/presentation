@@ -1,0 +1,32 @@
+!!! 5
+html(lang="en")  
+  head
+    title Node.JS Presentation | Slides
+    link(rel='stylesheet', type='text/css', href='media/css/prettify.css')
+    link(rel='stylesheet', type='text/css', href='media/css/presentation.css')
+    script(type='text/javascript', src='media/js/jquery-1.7.1.min.js')
+    script(type='text/javascript', src='media/js/fathom.min.js')
+    script(type='text/javascript', src='media/js/prettify.js')
+    script
+      $(document).ready(function() {
+        $('pre').addClass('prettyprint').attr('tabIndex', 0);
+        prettyPrint();
+
+        var fathom = $('#presentation').Fathom( {
+          onActivateSlide: function() {
+            var $slide = $(this);
+            $slide.find('pre:first').focus();
+          }
+        });
+      });
+  body
+    h1 Node.JS Presentation
+    div(id="presentation")
+      div(class="slide")
+        h2 Welcome
+        ul
+          li First point
+          li Second point
+      div(class="slide")
+        h2 Bye...
+        p bye bye
