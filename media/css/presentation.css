@@ -184,14 +184,14 @@ q {
 
 
 ul {
-	padding: 60px;
+	padding: 100px;
 }
 ul li {
 	color: #121B28;
 	font-family: helvetica, calibri, arial, sans-serif;
-	font-size: 22pt;
+	font-size: 26pt;
 	font-weight: normal;
-	line-height: 30pt;
+	line-height: 36pt;
 	list-style-type: disc;
 	margin-bottom: 24px;
 	text-align: left;
@@ -199,4 +199,20 @@ ul li {
 
 a {
 	color: #75B143;
+}
+
+div#IO_cost {
+  width: 100%
+  height: 100%
+  background: url(/media/img//io-cost.png) center center no-repeat
+}
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.verticalCenter {
+  min-height: 12em;
+  display: table-cell;
+  vertical-align: middle;
 }
