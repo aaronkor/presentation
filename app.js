@@ -7,7 +7,6 @@ app.set('view options', {
 });
 
 app.use('/media', express.static(__dirname + '/media'));
-//app.use('/media/js', express.static(__dirname + 'media/js/'));
 
 app.get('/', function(req, res){
   res.send('hello world\n' + __dirname + '/media/img/nodejs-light.eps\n');
