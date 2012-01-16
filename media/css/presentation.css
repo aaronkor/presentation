@@ -185,14 +185,19 @@ q {
 
 ul {
 	padding: 100px;
+  list-style-type: circle;
 }
-ul li {
+ol {
+	padding: 100px;
+  list-style-type: lower-alpha;
+}
+
+ul li, ol li {
 	color: #121B28;
 	font-family: helvetica, calibri, arial, sans-serif;
-	font-size: 26pt;
+	font-size: 24pt;
 	font-weight: normal;
 	line-height: 36pt;
-	list-style-type: disc;
 	margin-bottom: 24px;
 	text-align: left;
 }
