@@ -3,7 +3,8 @@ var app = express.createServer();
 
 app.set('view engine', 'jade');
 app.set('view options', {
-  layout: false
+  layout: false,
+  pretty: true
 });
 
 app.use('/media', express.static(__dirname + '/media'));
