@@ -21,8 +21,10 @@ html
 
       // id=asynchronous-javascript
       div(id='introduction', class='step')
-        h1 Introduction to
+        h2 Introduction to
         br
+        h1
+          strong node.js
         div(id='node-logo')
         p(class='footer')
           | SOA University, Aaron Kor
@@ -32,12 +34,137 @@ html
         h2 Node.js is
         ul
           li Server-side JavaScript
-          li Mainly for netwirk oriented applications
+          li Mainly for network oriented applications
           li Built on top of Google V8 engine
           li CommonJS support
           li
             strong Event-driven, non blocking I/O
 
+      // id=
+      div(id='io-expensive', class='step')
+        h2 The I/O is expensive
+        img(id='io', class='centered', src='media/img/io-cost.png', alt='The cost of I/O')
+
+      // id=
+      div(id='rocky-vs-drago', class='step')
+        center
+          h3 Yay! Multi-threading!
+          br
+          img(id='rocky', class='centered', src='media/img/Rocky-vs-Drago.jpg', alt='Rocky vs Drago')
+          br
+          strong Apache vs Nginx
+      
+      // id=
+      div(id='graphs', class='step')
+        center
+          img(src="media/img/nginx-apache-reqs-sec.png", "Apache vs Nginx - Requests per second")
+          br
+          img(src="media/img/nginx-apache-memory.png", "Apache vs Nginx - Memory")
+          br
+          p (No mo graphs, me promise...)
+
+      div(id='difference', class='step')
+        h2 The difference?
+        center
+          p
+            b Apache
+            &nbsp;- uses thread per connection
+          p
+            b Nginx
+            &nbsp;- uses event loop
+
+      div(div='threads-wrong', class='step')
+        center
+          h3 So, what's wrong with threads?
+        ul
+          li Context switching is not free
+          li Execution stacks take up memory
+          li Therading concurrency is a leaky
+
+      div(id='in-node', class='step')
+        h2 In node.js
+        center
+          h3 everything runs in parallel
+          h3(id='except')
+            | EXCEPT YOUR CODE
+
+      div(id='king', class='step')
+        p [king image]
+
+      div(id='conventional-query', class='step')
+        p A conventional code
+        pre
+          code
+            | var result = db.query("select ...");
+            br
+            | // use result
+
+      div(id='node-query', class='step')
+        p will be written in node as
+        pre
+          code
+            | db.query("select ...", function (result) {
+            |   // use result
+            | });
+
+      div(id='timeout-example', class='step')
+        p For example
+        pre
+          code
+            | setTimeout( function () {
+            |   console.log("node");
+            | }, 3000);
+            | console.log("hello");
+        p will yield
+        
+        pre
+          code
+            | hello
+            | node [after 3 secs]
+
+      div(id='write-code', class='step')
+        h1 Shall we write some code?
+
+      div(id='npm', class='step')
+        center
+          h3 The 
+            b NPM 
+            i (node package manager)
+        ul
+          li Manages third parties for the project
+          li Uses 
+            b package.json 
+            | for dependencies
+        pre
+          code
+            | {
+            |     "name": "application-name"
+            |   , "version": "0.0.1"
+            |   , "private": true
+            |   , "dependencies": {
+            |       "express": "2.5.4"
+            |     , "jade": ">= 0.0.1"
+            |   }
+            | }
+
+      div(id='packages', class='step')
+        h2 Some popular packages
+        ul
+          li express
+          li socket.io
+          li jade, stylus
+          li couchdb, redis
+          li node_pcap
+          li and hundreds more...
+
+      div(id='sum-up', class='step')
+        center
+          h2 To sum it up
+        br
+        img(id='ryah-tweet', class='centered', src='media/img/ryah-tweet.png', alt='Ryan Dahl tweet');
+
+      //overview
+      div(id='overview', class='step', data-x='3400', data-y='2000', data-scale='10')
 
 
       //javascripts
