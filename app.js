@@ -10,7 +10,7 @@ app.set('view options', {
 app.use('/media', express.static(__dirname + '/media'));
 
 app.get('/', function(req, res){
-  res.send('hello world\n' + __dirname + '/media/img/nodejs-light.eps\n');
+  res.render('index');
 });
 
 app.get('/slides', function(req, res){
