@@ -1,0 +1,47 @@
+!!! 5
+
+html
+  head
+    meta(charset='uft-8')
+    title Intorduction to Node.js | SOA University | Aaron Kor
+
+    //stylesheets
+    link(rel='stylesheet', href='media/css/font.css')
+    link(rel='stylesheet', href='media/css/default.css')
+    link(rel='stylesheet', href='media/highlight/styles/sunburst.css')
+
+  body
+    //impress
+    div(id='impress', class='impress-not-supported')
+      div(id='fm1', class='fallback-message hidden')
+        p Your browser does not support the features required by impress.js
+
+      div(id='fm1', class='fallback-message')
+        p Your browser's fine, but somehting is wrong
+
+      // id=asynchronous-javascript
+      div(id='intro', class='step')
+        h1 Introduction to
+        br
+        div(id='node-logo')
+        p(class='footer')
+          | SOA University, Aaron Kor
+
+      // id=why-asynchronous
+      div(id='nodejs-is', class='step')
+        h2 Node.js is
+        ul
+          li Server-side JavaScript
+          li Mainly for netwirk oriented applications
+          li Built on top of Google V8 engine
+          li CommonJS support
+          li
+            strong Event-driven, non blocking I/O
+
+
+
+      //javascripts
+      script(src='media/highlight/highlight.pack.js')
+      script(src='media/js/impress.js')
+      script(src='media/js/default.js')
+

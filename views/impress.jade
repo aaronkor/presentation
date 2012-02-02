@@ -1,0 +1,36 @@
+!!! 5
+html(lang='en')
+  head
+    title Node.JS Presentation
+    
+    link(rel='stylesheet', type='text/css', href='media/css/prettify.css')    
+    link(rel='stylesheet', type='text/css', href='media/css/impress.css')
+
+    script(type='text/javascript', src='media/js/prettify.js')
+
+  body
+    div(id='impress')
+      
+      div(id='pre-title', class='step slide', data-x='-1000', data-y='-1000')
+        center
+          strong SOA University
+          br
+          br
+          by Aaron Kor
+      
+      div(id='title', class='step', data-x='0', data-y='0')
+        center
+          // strong Introduction to
+          img(src='/media/img/Nodejs_logo_light.png')
+
+      div(class='step', data-rotate="90", data-x='0', data-y='1000', data-scale='1.5')
+        // strong Node.JS&nbsp;&nbsp;is:
+        ul
+          li Server-Side JavaScript
+          li Mainly for Network Oriented Applications
+          li Built on Google's V8 Engine
+          li CommonJS Support
+          li 
+            strong Event-Driven, Non-Blocking I/O
+   
+    script(src='media/js/impress.js')
