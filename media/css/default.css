@@ -352,3 +352,9 @@ ul.center {
   margin-right: auto;
   width: 50%;
 }
+
+ol.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}

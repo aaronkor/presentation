@@ -19,7 +19,6 @@ html
       div(id='fm1', class='fallback-message')
         p Your browser's fine, but somehting is wrong
 
-      // id=asynchronous-javascript
       div(id='introduction', class='step')
         h2 Introduction to
         br
@@ -27,9 +26,8 @@ html
           strong node.js
         div(id='node-logo')
         p(class='footer')
-          | SOA University, Aaron Kor
+          | Aaron Kor
 
-      // id=why-asynchronous
       div(id='nodejs-is', class='step')
         h2 Node.js is
         ul
@@ -40,12 +38,18 @@ html
           li
             strong Event-driven, non blocking I/O
 
-      // id=
       div(id='io-expensive', class='step')
         h2 The I/O is expensive
         img(id='io', class='centered', src='media/img/io-cost.png', alt='The cost of I/O')
 
-      // id=
+      div(id='deal', class='step')
+        center
+          h3 How to deal with it?
+        ol(class='center')
+          li Synchronous
+          li Process forking
+          li Multi-threaded
+
       div(id='rocky-vs-drago', class='step')
         center
           h3 Yay! Multi-threading!
@@ -54,7 +58,6 @@ html
           br
           strong Apache vs Nginx
       
-      // id=
       div(id='graphs', class='step')
         center
           img(src="media/img/nginx-apache-reqs-sec.png", "Apache vs Nginx - Requests per second")
@@ -73,7 +76,7 @@ html
             b Nginx
             &nbsp;- uses event loop
 
-      div(div='threads-wrong', class='step')
+      div(id='threads-wrong', class='step')
         center
           h3 So, what's wrong with threads?
         ul
@@ -163,8 +166,18 @@ html
         br
         img(id='ryah-tweet', class='centered', src='media/img/ryah-tweet.png', alt='Ryan Dahl tweet');
 
+      div(id='thanks', class='step')
+        h2 Thanks.
+        center
+          br
+          p presentation available at
+          a(href='http://www.github.com/aaronkor/presentation')
+            | http://www.github.com/aaronkor/presentation
+          p(class='footer')
+            | Aaron Kor
+
       //overview
-      div(id='overview', class='step', data-x='3400', data-y='2000', data-scale='10')
+      div(id='overview', class='step', data-x='2800', data-y='1400', data-scale='8')
 
 
       //javascripts

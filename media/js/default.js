@@ -1,39 +1,45 @@
 impress.steps = {
-    "asynchronous-javascript": {
-        x: -300, y: -600, scale: 5 },
-    "why-asynchronous": {
-        x: 3200, y: -1500, scale: 3 },
-    "client-side": {
-        x: 2600, y: -1100, scale: 1 },
-    "server-side": {
-        x: 3700, y: -1100, scale: 1  },
-    "why-asynchronous-on-server-side": {
-        x: 3200, y: -600, scale: 2 },
-    "its-about-external-resources": {
-        x: 2600, y: -100, scale: 1  },
-    "how-much-waiting-can-cost": {
-        x: 2600, y: 400, scale: 1  },
-    "better-software-can-multitask": {
-        x: 3700, y: 0, scale: 1  },
-    "how-io-should-be-done": {
+    "introduction": {
+        x: -300, y: -600, scale: 6 },
+    "nodejs-is": {
+        x: 3200, y: -1200, scale: 3 },
+    "io-expensive": {
+        x: 3000, y: 0, scale: 1.5 },
+    "deal": {
+        x: 3000, y: 600, scale: 1 },
+    "rocky-vs-drago": {
+        x: 5900, y: -1650, scale: 0.5  },
+    "graphs": {
+        x: 5100, y: -800, scale: 1 },
+    "difference": {
+        x: 5100, y: -1650, scale: 2  },
+    "threads-wrong": {
+        x: 5600, y: 400, scale: 1  },
+    "in-node": {
+        x: -200, y: 2500, scale: 4  },
+    "king": {
         x: 3700, y: 500, scale: 1  },
-    "how-to-write-asynchronous-code": {
-        x: 5900, y: -1470, scale: 4 },
-    "nodejs-convention": {
-        x: 4900, y: -1100, scale: 1  },
-    "exercise": {
+    "conventional-query": {
+        x: -600, y: 600, scale: 1 },
+    "node-query": {
+        x: -200, y: 1400, scale: 4  },
+    "timeout-example": {
         x: 5900, y: -1000, scale: 1  },
-    "exercise-nodejs": {
-        x: 6900, y: -1000, scale: 1  },
-    "exercise-node-comment": {
-        x: 6900, y: -350, scale: 1  },
-    "most-popular-solutions": {
-        x: 4900, y: -400, scale: 1  },
-    "it-can-be-done-better-than-that": {
-        x: 5900, y: -300, scale: 1  },
+    "write-code": {
+        x: 2050, y: 1900, scale: 2.5, rotate: -90  },
+    "npm": {
+        x: 3500, y: 2350, scale: 1.5  },
+    "packages": {
+        x: 3450, y: 1300, scale: 1.5  },
+    "sum-up": {
+        x: 4000, y: -100, scale: 1, rotate: -90  },
 
-    "deferred-promise": {
-        x: 100, y: 900, scale: 5 },
+    "thanks": {
+        x: 5500, y: 2150, scale: 3.5 },
+
+
+
+
     "what-is-deferred": {
         x: 100, y: 1270, scale: 4 },
     "deferred": {
