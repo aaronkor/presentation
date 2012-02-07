@@ -7,6 +7,8 @@ impress.steps = {
         x: 3000, y: 0, scale: 1.5 },
     "deal": {
         x: 3000, y: 600, scale: 1 },
+    "yay": {
+        x: 3000, y: 600, scale: 1 },
     "rocky-vs-drago": {
         x: 5900, y: -1650, scale: 0.5  },
     "graphs": {
