@@ -20,7 +20,7 @@ impress.steps = {
     "in-node": {
         x: -200, y: 2500, scale: 4  },
     "king": {
-        x: 3700, y: 500, scale: 1  },
+        x: 3700, y: 500, scale: 0.5  },
     "conventional-query": {
         x: -600, y: 600, scale: 1 },
     "node-query": {
