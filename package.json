@@ -1,0 +1,14 @@
+{
+  "name" : "node-presentation",
+  "version" : "0.0.1",
+  "author" : "Aaron Kor",
+  "description" : "A node.js presentation",
+  "dependencies": {
+    "express" : "2.5.x",
+    "jade" : "0.20.x",
+    "socket.io" : "0.8.7"
+  }
+  "engine" : {
+    "node" : ">=0.6"
+  }
+}
