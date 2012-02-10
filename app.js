@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express.createServer();
-var port = 8080
+var port = 8080;
+var io = require('socket.io').listen(app);
 
 app.set('view engine', 'jade');
 app.set('view options', {
@@ -17,6 +18,20 @@ app.get('/', function(req, res){
 app.get('/slides', function(req, res){
   res.render('slides');
 });
+
+
+//socket.io stuff
+io.sockets.on('connection', function(socket) {
+  console.log('socket connected');
+  socket.on('timeout-example-request', function(data) {
+    console.log('timeout-example-request');
+    setTimeout( function () {
+      socket.emit('timeout-example-response', 'node');
+    }, 3000);
+    socket.emit('timeout-example-response', 'hello');
+  });
+});
+
 
 app.listen(port);
 console.log('Listening at http://localhost:' + port + ' ...\n');

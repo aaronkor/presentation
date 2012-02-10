@@ -428,7 +428,7 @@
                 var href = target.getAttribute("href");
 
                 // if it's a link to presentation step, target this step
-                if ( href && href[0] == '#' ) {
+                if ( href && href[0] == '#' && href.length > 1) {
                     target = byId( href.slice(1) );
                 }
             }
