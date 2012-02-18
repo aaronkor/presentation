@@ -6,8 +6,8 @@
   "dependencies": {
     "express" : "2.5.x",
     "jade" : "0.20.x",
-    "socket.io" : "0.8.7"
-  }
+    "socket.io" : ">=0.8.7"
+  },
   "engine" : {
     "node" : ">=0.6"
   }
