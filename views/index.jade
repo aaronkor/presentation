@@ -12,23 +12,22 @@ html
 
   body
     //impress
-    div(id='impress', class='impress-not-supported')
-      div(id='fm1', class='fallback-message hidden')
+    #impress.impress-not-supported
+      #fm1.fallback-message.hidden
         p Your browser does not support the features required by impress.js
-
-      div(id='fm1', class='fallback-message')
+      
+      #fm1.fallback-message
         p Your browser's fine, but somehting is wrong
 
-      div(id='introduction', class='step')
+      #introduction.step
         h2 Introduction to
         br
         h1
           strong node.js
-        div(id='node-logo')
-        p(class='footer')
-          | Aaron Kor
+        #node-logo
+        p.footer Aaron Kor &nbsp&nbsp| &nbsp&nbspSOA University&nbsp&nbsp |&nbsp&nbsp Feb 2012
 
-      div(id='nodejs-is', class='step')
+      #nodejs-is.step
         h2 node.js is
         ul
           li Server-side JavaScript
@@ -38,22 +37,22 @@ html
           li
             strong Event-driven, non blocking I/O
 
-      div(id='io-expensive', class='step')
+      #io-expensive.step
         h2 The I/O is expensive
         img(id='io', class='centered', src='media/img/io-cost.png', alt='The cost of I/O')
 
-      div(id='deal', class='step')
+      #deal.step
         center
           h3 How to deal with it?
-        ol(class='center')
+        ol.center
           li Synchronous
           li Process forking
           li Multi-threaded
       
-      div(id='yay', class='step')
+      #yay.step
         center
           h3 How to deal with it?
-        ol(class='center')
+        ol.center
           li Synchronous
           li Process forking
           li 
@@ -61,13 +60,13 @@ html
             b
               i Yay!
 
-      div(id='rocky-vs-drago', class='step')
+      #rocky-vs-drago.step
         center
           img(id='rocky', class='centered', src='media/img/Rocky-vs-Drago.jpg', alt='Rocky vs Drago')
           br
           strong Apache vs Nginx
       
-      div(id='graphs', class='step')
+      #graphs.step
         center
           img(class="graph", src="media/img/nginx-apache-reqs-sec.png", alt="Apache vs Nginx - Requests per second")
           br
@@ -75,7 +74,7 @@ html
           br
           p (No mo graphs, me promise...)
 
-      div(id='difference', class='step')
+      #difference.step
         h2 The difference?
         center
           p
@@ -85,32 +84,31 @@ html
             b Nginx
             &nbsp;- uses event loop
 
-      div(id='threads-wrong', class='step')
+      #threads-wrong.step
         center
           h3 So, what's wrong with threads?
         ul
           li Context switching is not free
           li Execution stacks take up memory
 
-      div(id='in-node', class='step')
+      #in-node.step
         h2 In node.js
         center
           h3 everything runs in parallel
-          h3(id='except')
+          h3#except
             | EXCEPT YOUR CODE
 
-      div(id='king', class='step')
+      #king.step
         center
           img(src='media/img/king.png', alt='king image')
 
-      div(id='conventional-query', class='step')
+      #node-query.step
         p A conventional code
         pre
           code
             | var result = db.query("select ...");
             | // use result
 
-      div(id='node-query', class='step')
         p will be written in node as
         pre
           code
@@ -118,7 +116,7 @@ html
             |   // use result
             | });
 
-      div(id='timeout-example', class='step')
+      #timeout-example.step
         p For example
         pre
           code
@@ -131,13 +129,13 @@ html
         p will yield
         
         pre
-          code(id='timeoutOutput')
-            | >
+          code#timeoutOutput
+            | > &nbsp
 
-      div(id='write-code', class='step')
+      #write-code.step
         h1 Shall we write some code?
 
-      div(id='cloudST-1', class='step')
+      #cloudST-1.step
         h1 CloudST
         h2 The cornerstone
         p
@@ -145,15 +143,15 @@ html
         p
           br
       
-      div(id='cloudST-2', class='step')
+      #cloudST-2.step
         h1 CloudST
         h2 The cornerstone
         center
           p Concatenate strings with pleasure
-          p(id='incloud')
+          p#incloud
             | in cloud...
       
-      div(id='npm', class='step')
+      #npm.step
         center
           h3 The 
             b NPM 
@@ -179,7 +177,7 @@ html
             |   }
             | }
            
-      div(id='packages', class='step')
+      #packages.step
         h2 Some popular packages
         ul
           li express
@@ -190,24 +188,24 @@ html
           li 
             b and thousands more...
 
-      div(id='sum-up', class='step')
+      #sum-up.step
         center
           h2 To sum it up
         br
         img(id='ryah-tweet', class='centered', src='media/img/ryah-tweet.png', alt='Ryan Dahl tweet');
 
-      div(id='thanks', class='step')
+      #thanks.step
         h2 Thanks.
         center
           br
           p presentation available at
           a(href='http://www.github.com/aaronkor/presentation')
             | http://www.github.com/aaronkor/presentation
-          p(class='footer')
-            | Aaron Kor
+          p.footer Aaron Kor
 
       //overview
-      div(id='overview', class='step', data-x='2500', data-y='1000', data-scale='10')
+      // div(id='overview', class='step', data-x='2500', data-y='1000', data-scale='10')
+      #overview.step
 
 
       //javascripts
