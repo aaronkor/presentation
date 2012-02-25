@@ -29,7 +29,7 @@ html
           | Aaron Kor
 
       div(id='nodejs-is', class='step')
-        h2 Node.js is
+        h2 node.js is
         ul
           li Server-side JavaScript
           li Mainly for network oriented applications
@@ -91,7 +91,6 @@ html
         ul
           li Context switching is not free
           li Execution stacks take up memory
-          li Adds complexity
 
       div(id='in-node', class='step')
         h2 In node.js
@@ -138,28 +137,48 @@ html
       div(id='write-code', class='step')
         h1 Shall we write some code?
 
+      div(id='cloudST-1', class='step')
+        h1 CloudST
+        h2 The cornerstone
+        p
+          br
+        p
+          br
+      
+      div(id='cloudST-2', class='step')
+        h1 CloudST
+        h2 The cornerstone
+        center
+          p Concatenate strings with pleasure
+          p(id='incloud')
+            | in cloud...
+      
       div(id='npm', class='step')
         center
           h3 The 
             b NPM 
             i (node package manager)
-        ul
-          li Manages third parties for the project
-          li Uses 
-            b package.json 
-            | for dependencies
+          center
+            p 
+              i Uses 
+                b package.json 
         pre
           code
             | {
-            |     "name": "application-name"
-            |   , "version": "0.0.1"
-            |   , "private": true
-            |   , "dependencies": {
-            |       "express": "2.5.4"
-            |     , "jade": ">= 0.0.1"
+            |   "name" : "node-presentation",
+            |   "version" : "0.0.1",
+            |   "author" : "Aaron Kor",
+            |   "description" : "A node.js presentation",
+            |   "dependencies": {
+            |     "express" : "2.5.x",
+            |     "jade" : "0.20.x",
+            |     "socket.io" : "0.8.7"
+            |   },
+            |   "engine" : {
+            |     "node" : ">=0.6"
             |   }
             | }
-
+           
       div(id='packages', class='step')
         h2 Some popular packages
         ul

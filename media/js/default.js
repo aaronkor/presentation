@@ -29,6 +29,10 @@ impress.steps = {
         x: 5900, y: -1000, scale: 1  },
     "write-code": {
         x: 2050, y: 1900, scale: 2.5, rotate: -90  },
+    "cloudST-1": {
+        x: 500, y: 500, scale: 1.5 },
+    "cloudST-2": {
+        x: 500, y: 500, scale: 1.5 },
     "npm": {
         x: 3500, y: 2350, scale: 1.5  },
     "packages": {

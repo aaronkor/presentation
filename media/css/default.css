@@ -30,6 +30,8 @@ h3 b { font-size: 1.1em; }
 h3.lone { text-align: center; }
 h3#except { color: #c99; }
 
+#incloud { color: #c99; }
+
 h4 { color: #ddd; font-size: 36px; }
 
 img { 
