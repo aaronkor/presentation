@@ -121,16 +121,15 @@ html
         pre
           code
             | setTimeout( function () {
-            |   console.log("node");
-            | }, 3000);
-            | console.log("hello");
+            |   console.log("DARY!");
+            | }, 5000);
+            | console.log("LEGEN...");
           a(href='#', onClick='invokeTimeoutExample()')
             i Run!
         p will yield
         
         pre
-          code#timeoutOutput
-            | > &nbsp
+          code#timeoutOutput &nbsp
 
       #write-code.step
         h1 Shall we write some code?
@@ -203,10 +202,8 @@ html
             | http://www.github.com/aaronkor/presentation
           p.footer Aaron Kor
 
-      //overview
-      // div(id='overview', class='step', data-x='2500', data-y='1000', data-scale='10')
       #overview.step
-
+      //end of all steps
 
       //javascripts
       script(src='media/highlight/highlight.pack.js')
@@ -214,16 +211,22 @@ html
       script(src='media/js/default.js')
       script(src='socket.io/socket.io.js')
       script(type='text/javascript')
+        
+        function writeOutput(text) {
+          var field = document.getElementById('timeoutOutput').childNodes[0];
+          if(field) {
+            field.textContent += text;
+          }
+        }
+
         var socket = io.connect('http://localhost:8080');
         socket.on('timeout-example-response', function(data) {
           console.log(data);
-          var timeoutOutput = document.getElementById('timeoutOutput').childNodes[0];
-          if(timeoutOutput) {
-            timeoutOutput.textContent += data + '\\n';
-          }
+          writeOutput(data);
         });
 
         function invokeTimeoutExample () {
           console.log('invokeTimeoutExample');
+          writeOutput('\\n');
           socket.emit('timeout-example-request', null);
         }
