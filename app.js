@@ -15,11 +15,6 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-app.get('/slides', function(req, res){
-  res.render('slides');
-});
-
-
 //socket.io stuff
 io.sockets.on('connection', function(socket) {
   console.log('socket connected');
@@ -31,7 +26,6 @@ io.sockets.on('connection', function(socket) {
     socket.emit('timeout-example-response', 'LEGEN...');
   });
 });
-
 
 app.listen(port);
 console.log('Listening at http://localhost:' + port + ' ...\n');
