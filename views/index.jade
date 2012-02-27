@@ -12,24 +12,23 @@ html
 
   body
     //impress
-    div(id='impress', class='impress-not-supported')
-      div(id='fm1', class='fallback-message hidden')
+    #impress.impress-not-supported
+      #fm1.fallback-message.hidden
         p Your browser does not support the features required by impress.js
-
-      div(id='fm1', class='fallback-message')
+      
+      #fm1.fallback-message
         p Your browser's fine, but somehting is wrong
 
-      div(id='introduction', class='step')
+      #introduction.step
         h2 Introduction to
         br
         h1
           strong node.js
-        div(id='node-logo')
-        p(class='footer')
-          | Aaron Kor
+        #node-logo
+        p.footer Aaron Kor &nbsp&nbsp| &nbsp&nbspSOA University&nbsp&nbsp |&nbsp&nbsp Feb 2012
 
-      div(id='nodejs-is', class='step')
-        h2 Node.js is
+      #nodejs-is.step
+        h2 node.js is
         ul
           li Server-side JavaScript
           li Mainly for network oriented applications
@@ -38,22 +37,22 @@ html
           li
             strong Event-driven, non blocking I/O
 
-      div(id='io-expensive', class='step')
+      #io-expensive.step
         h2 The I/O is expensive
         img(id='io', class='centered', src='media/img/io-cost.png', alt='The cost of I/O')
 
-      div(id='deal', class='step')
+      #deal.step
         center
           h3 How to deal with it?
-        ol(class='center')
+        ol.center
           li Synchronous
           li Process forking
           li Multi-threaded
       
-      div(id='yay', class='step')
+      #yay.step
         center
           h3 How to deal with it?
-        ol(class='center')
+        ol.center
           li Synchronous
           li Process forking
           li 
@@ -61,13 +60,13 @@ html
             b
               i Yay!
 
-      div(id='rocky-vs-drago', class='step')
+      #rocky-vs-drago.step
         center
           img(id='rocky', class='centered', src='media/img/Rocky-vs-Drago.jpg', alt='Rocky vs Drago')
           br
           strong Apache vs Nginx
       
-      div(id='graphs', class='step')
+      #graphs.step
         center
           img(class="graph", src="media/img/nginx-apache-reqs-sec.png", alt="Apache vs Nginx - Requests per second")
           br
@@ -75,7 +74,7 @@ html
           br
           p (No mo graphs, me promise...)
 
-      div(id='difference', class='step')
+      #difference.step
         h2 The difference?
         center
           p
@@ -85,33 +84,31 @@ html
             b Nginx
             &nbsp;- uses event loop
 
-      div(id='threads-wrong', class='step')
+      #threads-wrong.step
         center
           h3 So, what's wrong with threads?
         ul
           li Context switching is not free
           li Execution stacks take up memory
-          li Adds complexity
 
-      div(id='in-node', class='step')
+      #in-node.step
         h2 In node.js
         center
           h3 everything runs in parallel
-          h3(id='except')
+          h3#except
             | EXCEPT YOUR CODE
 
-      div(id='king', class='step')
+      #king.step
         center
           img(src='media/img/king.png', alt='king image')
 
-      div(id='conventional-query', class='step')
+      #node-query.step
         p A conventional code
         pre
           code
             | var result = db.query("select ...");
             | // use result
 
-      div(id='node-query', class='step')
         p will be written in node as
         pre
           code
@@ -119,76 +116,94 @@ html
             |   // use result
             | });
 
-      div(id='timeout-example', class='step')
+      #timeout-example.step
         p For example
         pre
           code
             | setTimeout( function () {
-            |   console.log("node");
-            | }, 3000);
-            | console.log("hello");
+            |   console.log("DARY!");
+            | }, 5000);
+            | console.log("LEGEN...");
           a(href='#', onClick='invokeTimeoutExample()')
             i Run!
         p will yield
         
         pre
-          code(id='timeoutOutput')
-            | >
+          code#timeoutOutput &nbsp
 
-      div(id='write-code', class='step')
+      #write-code.step
         h1 Shall we write some code?
 
-      div(id='npm', class='step')
+      #cloudST-1.step
+        h1 CloudST
+        h2 The cornerstone
+        p
+          br
+        p
+          br
+      
+      #cloudST-2.step
+        h1 CloudST
+        h2 The cornerstone
+        center
+          p Concatenate strings with pleasure
+          p#incloud
+            | in cloud...
+      
+      #npm.step
         center
           h3 The 
             b NPM 
             i (node package manager)
-        ul
-          li Manages third parties for the project
-          li Uses 
-            b package.json 
-            | for dependencies
+          center
+            p 
+              i Uses 
+                b package.json 
         pre
           code
             | {
-            |     "name": "application-name"
-            |   , "version": "0.0.1"
-            |   , "private": true
-            |   , "dependencies": {
-            |       "express": "2.5.4"
-            |     , "jade": ">= 0.0.1"
+            |   "name" : "node-presentation",
+            |   "version" : "0.0.1",
+            |   "author" : "Aaron Kor",
+            |   "description" : "A node.js presentation",
+            |   "dependencies": {
+            |     "express" : "2.5.x",
+            |     "jade" : "0.20.x",
+            |     "socket.io" : "0.8.7"
+            |   },
+            |   "engine" : {
+            |     "node" : ">=0.6"
             |   }
             | }
-
-      div(id='packages', class='step')
+           
+      #packages.step
         h2 Some popular packages
         ul
           li express
           li socket.io
           li jade, stylus
-          li couchdb, redis
-          li node_pcap
-          li and hundreds more...
+          li mongodb, redis
+          li vows
+          li 
+            b and thousands more...
 
-      div(id='sum-up', class='step')
+      #sum-up.step
         center
           h2 To sum it up
         br
         img(id='ryah-tweet', class='centered', src='media/img/ryah-tweet.png', alt='Ryan Dahl tweet');
 
-      div(id='thanks', class='step')
+      #thanks.step
         h2 Thanks.
         center
           br
           p presentation available at
           a(href='http://www.github.com/aaronkor/presentation')
             | http://www.github.com/aaronkor/presentation
-          p(class='footer')
-            | Aaron Kor
+          p.footer Aaron Kor
 
-      //overview
-      div(id='overview', class='step', data-x='2500', data-y='1000', data-scale='8')
-
+      #overview.step
+      //end of all steps
 
       //javascripts
       script(src='media/highlight/highlight.pack.js')
@@ -196,16 +211,22 @@ html
       script(src='media/js/default.js')
       script(src='socket.io/socket.io.js')
       script(type='text/javascript')
+        
+        function writeOutput(text) {
+          var field = document.getElementById('timeoutOutput').childNodes[0];
+          if(field) {
+            field.textContent += text;
+          }
+        }
+
         var socket = io.connect('http://localhost:8080');
         socket.on('timeout-example-response', function(data) {
           console.log(data);
-          var timeoutOutput = document.getElementById('timeoutOutput').childNodes[0];
-          if(timeoutOutput) {
-            timeoutOutput.textContent += data + '\\n';
-          }
+          writeOutput(data);
         });
 
         function invokeTimeoutExample () {
           console.log('invokeTimeoutExample');
+          writeOutput('\\n');
           socket.emit('timeout-example-request', null);
         }
