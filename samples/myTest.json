@@ -1,0 +1,11 @@
+{
+	"name" : "myTest",
+	"actions" : [
+		{
+			"name" : "concat1",
+			"type" : "concatenateStrings",
+			"input" : ["con", "cat"],
+			"output" : "concat"
+		}
+	]
+}
