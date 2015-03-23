@@ -1,7 +1,10 @@
+var http = require('http');
 var express = require('express');
-var app = express.createServer();
+var app = express();
 var port = 8080;
-var io = require('socket.io').listen(app);
+
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
 
 app.set('view engine', 'jade');
 app.set('view options', {
@@ -16,7 +19,7 @@ app.get('/', function(req, res){
 });
 
 //socket.io stuff
-io.sockets.on('connection', function(socket) {
+io.on('connection', function(socket) {
   console.log('socket connected');
   socket.on('timeout-example-request', function(data) {
     console.log('timeout-example-request');
@@ -27,5 +30,5 @@ io.sockets.on('connection', function(socket) {
   });
 });
 
-app.listen(port);
+server.listen(port);
 console.log('Listening at http://localhost:' + port + ' ...\n');

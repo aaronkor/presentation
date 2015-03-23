@@ -1,15 +1,15 @@
 {
   "name" : "node-presentation",
-  "version" : "0.0.1",
+  "version" : "0.1.0",
   "author" : "Aaron Kor",
   "description" : "A node.js presentation",
   "dependencies": {
-    "express" : "2.5.x",
-    "jade" : "0.20.x",
-    "socket.io" : ">=0.8.7",
-    "nodeunit" : ">=0.7.3"
+    "express" : "*",
+    "jade" : "*",
+    "socket.io" : "*",
+    "nodeunit" : "*"
   },
   "engine" : {
-    "node" : ">=0.6"
+    "node" : ">=0.10"
   }
 }

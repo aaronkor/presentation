@@ -1,4 +1,4 @@
-!!! 5
+DOCTYPE
 
 html
   head
@@ -180,7 +180,7 @@ html
         center
           h2 To sum it up
         br
-        img(id='ryah-tweet', class='centered', src='media/img/ryah-tweet.png', alt='Ryan Dahl tweet');
+        img(id='ryah-tweet', class='centered', src='media/img/ryah-tweet.png', alt='Ryan Dahl tweet')
 
       #thanks.step
         h2 Thanks.
@@ -199,7 +199,7 @@ html
       script(src='media/js/impress.js')
       script(src='media/js/default.js')
       script(src='socket.io/socket.io.js')
-      script(type='text/javascript')
+      script(type='text/javascript').
         
         function writeOutput(text) {
           var field = document.getElementById('timeoutOutput').childNodes[0];
@@ -216,6 +216,6 @@ html
 
         function invokeTimeoutExample () {
           console.log('invokeTimeoutExample');
-          writeOutput('\\n');
+          //writeOutput('\\n');
           socket.emit('timeout-example-request', null);
         }
