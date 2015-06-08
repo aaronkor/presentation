@@ -1,19 +1,15 @@
 var http = require('http');
 var express = require('express');
 var app = express();
-var port = 8080;
+var port = 3000;
 
 var server = http.createServer(app);
-var io = require('socket.io').listen(server);
+var io = require('socket.io')(3001).listen(server);
 
 app.set('view engine', 'jade');
-app.set('view options', {
-  layout: false,
-  pretty: true
-});
+app.locals.pretty = true;
 
 app.use('/media', express.static(__dirname + '/media'));
-
 app.get('/', function(req, res){
   res.render('index');
 });
@@ -32,3 +28,4 @@ io.on('connection', function(socket) {
 
 server.listen(port);
 console.log('Listening at http://localhost:' + port + ' ...\n');
+ 

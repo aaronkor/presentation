@@ -2,8 +2,8 @@ DOCTYPE
 
 html
   head
-    meta(charset='uft-8')
-    title Intorduction to Node.js | SOA University | Aaron Kor
+    meta(charset='utf-8')
+    title Introduction to Node.js | Aaron Kor
 
     //stylesheets
     link(rel='stylesheet', href='media/css/font.css')
@@ -17,15 +17,12 @@ html
         p Your browser does not support the features required by impress.js
       
       #fm1.fallback-message
-        p Your browser's fine, but somehting is wrong
+        p Your browser does not support the features required by impress.js
 
       #introduction.step
         h2 Introduction to
-        br
-        h1
-          strong node.js
-        #node-logo
-        p.footer Aaron Kor &nbsp&nbsp| &nbsp&nbspSOA University&nbsp&nbsp |&nbsp&nbsp Feb 2012
+        img(id='nodejsLogo', class='centered', src='media/img/nodelogo.png', alt='Node.JS')
+        p.footer Aaron Kor &nbsp&nbsp| &nbsp&nbsp Apr 2015
 
       #nodejs-is.step
         h2 node.js is
@@ -48,37 +45,32 @@ html
           li Synchronous
           li Process forking
           li Multi-threaded
-
-      #rocky-vs-drago.step
-        center
-          img(id='rocky', class='centered', src='media/img/Rocky-vs-Drago.jpg', alt='Rocky vs Drago')
-          br
-          strong Apache vs Nginx
       
       #graphs.step
         center
+          h3 
+            strong A Tale Of Two Web Servers
           img(class="graph", src="media/img/nginx-apache-reqs-sec.png", alt="Apache vs Nginx - Requests per second")
+          br
           br
           img(class="graph", src="media/img/nginx-apache-memory.png", alt="Apache vs Nginx - Memory")
           br
-          p (No mo graphs, me promise...)
 
       #difference.step
         h2 The difference?
         center
           p
-            b Apache
-            &nbsp;- uses thread per connection
+            b Apache 
+            | (classic server) - uses thread per connection
           p
-            b Nginx
-            &nbsp;- uses event loop
+            b Nginx 
+            | (node.js equivalent) - uses event loop
 
       #threads-wrong.step
         center
           h3 So, what's wrong with threads?
-        ul
-          li Context switching is not free
-          li Execution stacks take up memory
+          p Context switching is not free
+          p Execution stacks take up memory
 
       #in-node.step
         h2 In node.js
@@ -89,7 +81,13 @@ html
 
       #king.step
         center
+          h2 Your Code
           img(src='media/img/king.png', alt='king image')
+
+      #event-loop.step
+        center
+          h2 Event Loop
+          img.event-loop(src='media/img/event-loop.jpg', alt='event loop diagram')
 
       #node-query.step
         p A conventional code
@@ -113,31 +111,13 @@ html
             |   console.log("DARY!");
             | }, 5000);
             | console.log("LEGEN...");
-          a(href='#', onClick='invokeTimeoutExample()')
-            i Run!
+          a(class='runButton', href='#', onClick='invokeTimeoutExample()') Run!
         p will yield
-        
         pre
           code#timeoutOutput &nbsp
 
       #write-code.step
-        h1 Shall we write some code?
-
-      #cloudST-1.step
-        h1 CloudST
-        h2 The cornerstone
-        p
-          br
-        p
-          br
-      
-      #cloudST-2.step
-        h1 CloudST
-        h2 The cornerstone
-        center
-          p Concatenate strings with pleasure
-          p#incloud
-            | in cloud...
+        h1 Show me some real code !!!11
       
       #npm.step
         center
@@ -152,42 +132,138 @@ html
           code
             | {
             |   "name" : "node-presentation",
-            |   "version" : "0.0.1",
+            |   "version" : "0.2.1",
             |   "author" : "Aaron Kor",
             |   "description" : "A node.js presentation",
             |   "dependencies": {
-            |     "express" : "2.5.x",
-            |     "jade" : "0.20.x",
-            |     "socket.io" : "0.8.7"
+            |     "express" : "4.12.*",
+            |     "jade" : "1.*",
+            |     "socket.io" : "*"
+            |   },
+            |   "devDependencies": { 
+            |     "nodeunit" : "*"
             |   },
             |   "engine" : {
-            |     "node" : ">=0.6"
+            |     "node" : ">=0.12"
             |   }
             | }
            
       #packages.step
-        h2 Some popular packages
-        ul
-          li express
-          li socket.io
-          li jade, stylus
-          li mongodb, redis
-          li vows
-          li 
-            b and thousands more...
-
-      #sum-up.step
         center
-          h2 To sum it up
-        br
-        img(id='ryah-tweet', class='centered', src='media/img/ryah-tweet.png', alt='Ryan Dahl tweet')
+          h2 Enterprise level packages
+          h3 Frontend / Middleware
+          ul.horizontal
+            li Express
+            li Tower
+            li Geddy
+          br
+          h3 Data Store Native Drivers
+          ul.horizontal
+            li Oracle
+            li SQL Server
+            li MongoDB
+
+      #usecases.step
+        h2 Use Cases
+        ul
+          li PayPal - 2x increase in productivity
+          ul
+            li Reusing NPM modules
+            li Using same language on the entire stack
+          li WalMart - released <b>on Black Friday!</b>
+          ul
+            li $1.5bn spent by customers
+            li Serving over 500 million page views
+
+      #more.step
+        center
+          h2 Many More...
+          ul.horizontal.logos
+            li
+              img(src='media/img/microsoft.jpg', alt='microsoft')
+            li
+              img(src='media/img/google.png', alt='google')
+            li
+              img(src='media/img/uber.png', alt='uber')
+            li
+              img(src='media/img/linkedin.png', alt='linkedin')
+            li
+              img(src='media/img/ebay.png', alt='ebay')
+            li
+              img(src='media/img/yahoo.jpg', alt='yahoo')
+
+      #advantages.step
+        h2 Advantages
+        ul
+          li performance & scalability
+          li maintainability
+          li client / server sharing assets
+          li productivity
+          li vibrant dev community
+          li trendy!
+          li ... no more "hung threads" messages
+
+      #disadvantages.step
+        h2 Disadvantages
+        ul
+          li need to avoid CPU heavy implementations
+          li "Callback Hell"
+        center
+          h3 &#x21D3;
+          h3 Better JavaScript knowledge needed
+
+      #blocks.step
+        center
+          h3 Building blocks of digital-enterprise architecture
+        ul
+          li Two-speed architecture
+          li Microservices
+          li Zero downtime
+          li Realtime data analytics
+
+      #twospeed.step
+        h3 
+          b Two-speed architecture
+        h3 Node.js covers the fast speed part
+      
+      #microservices.step
+        h3 
+          b Microservices
+        h3 Node.js is modular, cross-platform, easily maintaineable
+      
+      #zerodowntime.step
+        h3 
+          b Zero downtime
+        h3 Node.js can be deployed with zero downtime
+        p forever.js, liveswap.js, process.on('SIGTERM', ...), Cluster, ...
+
+      #realtime.step
+        h3 
+          b Realtime data analytics
+        h3 Node.js was built for realtime streaming
+        p e.g socket.io, integration with schema-less data stores
+
+      #further.step
+        center
+          h2 Further Information
+        ul
+          li 
+            a(target='blank' href='http://nodejs.org') nodejs.org
+            | /
+            a(target='blank' href='http://npmjs.org') npmjs.com
+          li
+            a(target='blank' href='http://www.nodebeginner.org') nodebeginner.org
+          li 
+            a(target='blank' href='http://lmgtfy.com/?q=node.js') just Google "node.js"
+          li
+            h3 Floor 8, Cube #43
 
       #thanks.step
         h2 Thanks.
         center
           br
-          p presentation available at
-          a(href='http://www.github.com/aaronkor/presentation')
+          p fork the presentation from
+          a(target='blank' href='http://www.github.com/aaronkor/presentation')
             | http://www.github.com/aaronkor/presentation
           p.footer Aaron Kor
 
@@ -208,7 +284,7 @@ html
           }
         }
 
-        var socket = io.connect('http://localhost:8080');
+        var socket = io.connect('http://localhost:3001');
         socket.on('timeout-example-response', function(data) {
           console.log(data);
           writeOutput(data);
@@ -216,6 +292,5 @@ html
 
         function invokeTimeoutExample () {
           console.log('invokeTimeoutExample');
-          //writeOutput('\\n');
           socket.emit('timeout-example-request', null);
         }
